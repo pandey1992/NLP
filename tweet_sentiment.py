@@ -26,7 +26,7 @@ for query in args:
     # Fetching the tweets
     list_tweets = []
     if len(args) == 4:
-        for status in tweepy.Cursor(api.search,q=query+" -filter:retweet",lang='en',result_type='recent').items(100):
+        for status in tweepy.Cursor(api.search,q=query+" -filter:retweet",lang='en',result_type='recent').items(1000):
             list_tweets.append(status.text)
         
     # Loading the vectorizer and classfier
@@ -81,9 +81,9 @@ for query in args:
     x_pos = np.arange(len(objects))
     plt.figure(figsize=(12,10))
     plt.subplot(4,1,i+1)
-    plt.bar(x_pos,[total_pos,total_neg],alpha=0.5)
+    plt.bar(x_pos,[total_pos/10,total_neg/10],alpha=0.5)
     plt.xticks(x_pos,objects)
-    plt.ylabel('Number')
-    plt.title('Number of Postive and Negative Tweets for {}'.format(query))
+    plt.ylabel('Percentage')
+    plt.title('Percentage of Postive and Negative Tweets for {}'.format(query))
     
     plt.show()
