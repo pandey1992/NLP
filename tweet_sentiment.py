@@ -79,7 +79,8 @@ for query in args:
     import numpy as np
     objects = ['Positive','Negative']
     x_pos = np.arange(len(objects))
-    
+    plt.figure(figsize=(12,10))
+    plt.subplot(4,1,i+1)
     plt.bar(x_pos,[total_pos,total_neg],alpha=0.5)
     plt.xticks(x_pos,objects)
     plt.ylabel('Number')
