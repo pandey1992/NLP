@@ -10,10 +10,10 @@ import pickle
 import matplotlib.pyplot as plt
 from tweepy import OAuthHandler
 # Initializing the keys
-consumer_key = 'TESkju80yilLxOirZsLzGcUN2'
-consumer_secret = 'R8gNntdy2g5YeXuDRz9276hnqNYqt0Sbxsvn7tVe7MMCHpZsEw' 
-access_token = '	2186081617-OnlcqzxMlMSMRxuSmospebAHJtHebhf47kT7LoU'
-access_secret ='bA3QkZrXN7uuYbQcEg1ErOhyWbqzgFhbtV64GpgHMvx8C'
+consumer_key = ''
+consumer_secret = '' 
+access_token = ''
+access_secret =''
 
 # Initializing the tokens
 auth = OAuthHandler(consumer_key, consumer_secret)
